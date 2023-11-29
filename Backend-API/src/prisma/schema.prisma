@@ -1,0 +1,35 @@
+// file: prisma/schema.prisma
+
+// Define your data model using Prisma Schema Language
+// https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-schema/prisma-schema-reference
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// generator client
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Specify the data source (SQLite in this example)
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Specify the data model
+model User {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+  password String
+  posts Post[]
+}
+
+model Post {
+  id     Int    @id @default(autoincrement())
+  title  String
+  content String
+  userId Int
+  user   User   @relation(fields: [userId], references: [id])
+}
