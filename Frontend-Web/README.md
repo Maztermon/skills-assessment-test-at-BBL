@@ -39,4 +39,4 @@ export default {
 
 ![Vite + React + TS - Google Chrome 30_11_2566 0_24_12](https://github.com/Maztermon/skills-assessment-test-at-BBL/assets/43300766/76a47dae-8333-4a45-836f-3e1b8013ceb8)
 
-ข้อมูลที่แสดงผมได้ใช้ตัส Mock-data
+ข้อมูลที่แสดงผมได้ใช้ตัว Mock-data เนื่องจากยังไม่ได้เชื่อมข้อมูลจากทาง backend
